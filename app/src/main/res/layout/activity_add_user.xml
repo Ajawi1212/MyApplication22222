@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddUserActivity">
+
+    <EditText
+        android:id="@+id/etNameAddUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Professional name..."
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/etDescriptionAddUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etDescriptionAddUser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="9dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Professional description..."
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/etAddressAddUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNameAddUser" />
+
+    <EditText
+        android:id="@+id/etAddressAddUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="address..."
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/spRestCatAddUser"
+        app:layout_constraintEnd_toEndOf="@+id/spRestCatAddUser"
+        app:layout_constraintTop_toBottomOf="@+id/etDescriptionAddUser" />
+
+    <Spinner
+        android:id="@+id/spRestCatAddUser"
+        android:layout_width="210dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/etPhoneAddUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddressAddUser"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etPhoneAddUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="phone..."
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivPhotoAddUser"
+        app:layout_constraintStart_toStartOf="@+id/spRestCatAddUser"
+        app:layout_constraintTop_toBottomOf="@+id/spRestCatAddUser" />
+
+    <ImageView
+        android:id="@+id/ivPhotoAddUser"
+        android:layout_width="140dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="Professional Logo"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddAddUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPhoneAddUser" />
+
+    <Button
+        android:id="@+id/btnAddAddUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="14dp"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ivPhotoAddUser"
+        app:layout_constraintTop_toBottomOf="@+id/ivPhotoAddUser" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
