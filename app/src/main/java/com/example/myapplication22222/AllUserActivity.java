@@ -8,28 +8,29 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class AllRestActivity extends AppCompatActivity {
+public class AllUserActivity extends AppCompatActivity {
 
-    private RecyclerView rvAllRest;
+    private RecyclerView rvAllUser;
     MyRecyclerViewAdapter adapter;
+    private AddUserActivity professional;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_all_rest);
+        setContentView(R.layout.activity_all_user);
 
         // data to populate the RecyclerView with
-        ArrayList<String> animalNames = new ArrayList<>();
-        animalNames.add("Horse");
-        animalNames.add("Cow");
-        animalNames.add("Camel");
-        animalNames.add("Sheep");
-        animalNames.add("Goat");
+        ArrayList<String> professionalNames = new ArrayList<>();
+        professional.add("aws");
+        professional.add("ward");
+        professional.add("jamel");
+        professional.add("mohamad");
+        professional.add("ghazy");
 
         // set up the RecyclerView
-        RecyclerView recyclerView = findViewById(R.id.rvRestsAllRest);
+        RecyclerView recyclerView = findViewById(R.id.rvRestsAllUser);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new MyRecyclerViewAdapter(this, animalNames);
+        adapter = new MyRecyclerViewAdapter(this, professionalNames);
         recyclerView.setAdapter(adapter);
     }
 }

@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent i = new Intent(MainActivity.this, AllRestActivity.class);
+                            Intent i = new Intent(MainActivity.this, AddUserActivity.class);
                             startActivity(i);
 
                         } else {
@@ -72,13 +72,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void gotoAddRest(View view) {
+    public void gotoAddUser(View view) {
         Intent i = new Intent(this, AddUserActivity.class);
         startActivity(i);
     }
 
-    public void gotoAllRests(View view) {
-        Intent i = new Intent(this, AllRestActivity.class);
+    public void gotoAllUsers(View view) {
+        Intent i = new Intent(this, AllUserActivity.class);
         startActivity(i);
     }
 }

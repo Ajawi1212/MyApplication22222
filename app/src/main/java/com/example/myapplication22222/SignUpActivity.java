@@ -44,6 +44,7 @@ public class SignUpActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
 
                             // TODO: commands if successful
+
                         } else {
 
                             // TODO: commands if failed

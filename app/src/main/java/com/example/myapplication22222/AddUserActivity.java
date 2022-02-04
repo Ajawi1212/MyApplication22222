@@ -7,8 +7,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -28,7 +26,6 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
  class AddUserActivity extends AppCompatActivity {
@@ -62,7 +59,7 @@ import java.util.UUID;
         storageReference = fbs.getStorage().getReference();
     }
 
-    public void add(View view) {
+    public void add(String view) {
         // check if any field is empty
         String name, description, address, phone, category, photo;
         name = etName.getText().toString();

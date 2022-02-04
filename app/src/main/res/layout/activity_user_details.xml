@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".UserDetails">
+
+    <TextView
+        android:id="@+id/tvDetailsUserDetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="30dp"
+        android:text="User Details"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvNameUserDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNameUserDetails"
+        android:layout_width="164dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="92dp"
+        android:hint="Full name..."
+        android:textColorHint="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAgeUserDetails"
+        android:layout_width="166dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="37dp"
+        android:hint="Age"
+        android:textColorHint="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@+id/tvExprienceUserDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameUserDetails" />
+
+    <TextView
+        android:id="@+id/tvExprienceUserDetails"
+        android:layout_width="164dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="39dp"
+        android:hint="Exprience..."
+        android:textColorHint="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddressUserDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAddressUserDetails"
+        android:layout_width="168dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="257dp"
+        android:hint="Address..."
+        android:textColorHint="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDetailsUserDetails" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="182dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddressUserDetails"
+        tools:srcCompat="@drawable/constructorimage" />
+
+    <Button
+        android:id="@+id/btnBackUserDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="72dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNextUserDetails2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="72dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

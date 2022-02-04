@@ -5,4 +5,5 @@
     <item name="etUsernameSignup" type="id" />
     <item name="etPasswordSignup" type="id" />
     <item name="tvAnimalName" type="id" />
+    <item name="rvRestsAllUser" type="id" />
 </resources>
