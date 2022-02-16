@@ -8,11 +8,14 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class AllUserActivity extends AppCompatActivity {
+
+
+public class AllProActivity extends AppCompatActivity {
 
     private RecyclerView rvAllUser;
     MyRecyclerViewAdapter adapter;
     private AddUserActivity professional;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +31,7 @@ public class AllUserActivity extends AppCompatActivity {
         professional.add("ghazy");
 
         // set up the RecyclerView
-        RecyclerView recyclerView = findViewById(R.id.rvRestsAllUser);
+        RecyclerView recyclerView = findViewById(R.id.rvUsersAllUser);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new MyRecyclerViewAdapter(this, professionalNames);
         recyclerView.setAdapter(adapter);

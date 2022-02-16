@@ -4,8 +4,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
-
 enum ErrorCodes
 {
     IncorrectAuth, FieldsEmpty, True, False
@@ -13,7 +11,7 @@ enum ErrorCodes
 
 enum UserCat
 {
-    Carpenter , Constractor , Designer , Electrical , IronWorker , Painter , Plumber , Titler
+    Carpenter , Constractor , Designer , Electrical , IronWorker , Painter , Plumber , Tiler
 }
 
 public class Utilities {

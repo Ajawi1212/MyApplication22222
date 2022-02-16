@@ -1,11 +1,13 @@
 package com.example.myapplication22222;
 
-public class Titler {
+
+
+public class Tiler {
 
     private String Name;
     private int PhoneNum;
 
-    public Titler(String name, int phoneNum) {
+    public Tiler(String name, int phoneNum) {
         Name = name;
         PhoneNum = phoneNum;
     }

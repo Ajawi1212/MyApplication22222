@@ -48,11 +48,11 @@ import java.util.UUID;
     }
 
     private void connectComponents() {
-        etName = findViewById(R.id.etNameAddUser);
+        etName = findViewById(R.id.etNameMain);
         etDesc = findViewById(R.id.etDescriptionAddUser);
         etAddress = findViewById(R.id.etAddressAddUser);
         etPhone = findViewById(R.id.etPhoneAddUser);
-        spCat = findViewById(R.id.spRestCatAddUser);
+        spCat = findViewById(R.id.spUserCatAddUser);
         ivPhoto = findViewById(R.id.ivPhotoAddUser);
         fbs = FirebaseServices.getInstance();
         spCat.setAdapter(new ArrayAdapter<UserCat>(this, android.R.layout.simple_list_item_1, UserCat.values()));
@@ -78,9 +78,9 @@ import java.util.UUID;
             return;
         }
 
-        User rest = new User(name, description, address, UserCat.valueOf(category), photo, phone);
-        fbs.getFire().collection("restaurants")
-                .add(rest)
+        UserClass user = new UserClass( name, description,  address, address, category) ;
+        fbs.getFire().collection("Users")
+                .add(user)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
@@ -128,8 +128,7 @@ import java.util.UUID;
         if (filePath != null) {
 
             // Code for showing progressDialog while uploading
-            ProgressDialog progressDialog
-                    = new ProgressDialog(this);
+            ProgressDialog progressDialog = new ProgressDialog(this);
             progressDialog.setTitle("Uploading...");
             progressDialog.show();
 

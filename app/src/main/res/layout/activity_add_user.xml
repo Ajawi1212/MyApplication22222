@@ -4,96 +4,125 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/blackbackground"
     tools:context=".AddUserActivity">
 
-    <EditText
-        android:id="@+id/etNameAddUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Professional name..."
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/etDescriptionAddUser"
+    <ImageView
+        android:id="@+id/ivBlack1Main"
+        android:layout_width="411dp"
+        android:layout_height="243dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/jojo" />
 
     <EditText
         android:id="@+id/etDescriptionAddUser"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="9dp"
+        android:layout_width="217dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="94dp"
+        android:backgroundTint="#0B0B0B"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Professional description..."
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/etAddressAddUser"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNameAddUser" />
+        app:layout_constraintTop_toBottomOf="@+id/etAddressAddUser" />
 
     <EditText
         android:id="@+id/etAddressAddUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="11dp"
+        android:layout_width="215dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="96dp"
+        android:backgroundTint="@color/purple_500"
         android:ems="10"
         android:hint="address..."
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/spRestCatAddUser"
-        app:layout_constraintEnd_toEndOf="@+id/spRestCatAddUser"
-        app:layout_constraintTop_toBottomOf="@+id/etDescriptionAddUser" />
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNameAddUser" />
 
-    <Spinner
-        android:id="@+id/spRestCatAddUser"
-        android:layout_width="210dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/etPhoneAddUser"
+    <EditText
+        android:id="@+id/etNameAddUser"
+        android:layout_width="216dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="95dp"
+        android:ems="10"
+        android:hint="Name..."
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAddressAddUser"
+        app:layout_constraintTop_toBottomOf="@+id/ivBlack1Main" />
+
+    <Spinner
+        android:id="@+id/spUserCatAddUser"
+        android:layout_width="215dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="93dp"
+        android:backgroundTint="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPhoneAddUser"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/etPhoneAddUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="216dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="93dp"
+        android:backgroundTint="#0C0C0C"
         android:ems="10"
         android:hint="phone..."
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/ivPhotoAddUser"
-        app:layout_constraintStart_toStartOf="@+id/spRestCatAddUser"
-        app:layout_constraintTop_toBottomOf="@+id/spRestCatAddUser" />
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescriptionAddUser" />
 
     <ImageView
         android:id="@+id/ivPhotoAddUser"
-        android:layout_width="140dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="25dp"
+        android:layout_width="124dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="144dp"
+        android:background="@drawable/constructorimage"
         android:contentDescription="Professional Logo"
-        app:layout_constraintBottom_toTopOf="@+id/btnAddAddUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPhoneAddUser" />
+        app:layout_constraintTop_toBottomOf="@+id/spUserCatAddUser" />
 
     <Button
         android:id="@+id/btnAddAddUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="13dp"
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/ivPhotoAddUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivPhotoAddUser" />
 
 
