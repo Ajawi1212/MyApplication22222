@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/blackbackground"
-    tools:context=".AddUserActivity">
+    tools:context=".AddProActivity">
 
     <ImageView
         android:id="@+id/ivBlack1Main"
@@ -17,11 +17,11 @@
         app:srcCompat="@drawable/jojo" />
 
     <EditText
-        android:id="@+id/etDescriptionAddUser"
+        android:id="@+id/etDescriptionAddPro"
         android:layout_width="217dp"
         android:layout_height="48dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="94dp"
         android:backgroundTint="#0B0B0B"
         android:ems="10"
@@ -31,15 +31,16 @@
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAddressAddUser" />
+        app:layout_constraintTop_toBottomOf="@+id/etAddressAddPro" />
 
     <EditText
-        android:id="@+id/etAddressAddUser"
+        android:id="@+id/etAddressAddPro"
         android:layout_width="215dp"
         android:layout_height="48dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="96dp"
         android:backgroundTint="@color/purple_500"
         android:ems="10"
@@ -50,15 +51,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNameAddUser" />
+        app:layout_constraintTop_toBottomOf="@+id/etNameAddPro" />
 
     <EditText
-        android:id="@+id/etNameAddUser"
+        android:id="@+id/etNameAddPro"
         android:layout_width="216dp"
         android:layout_height="48dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginEnd="96dp"
         android:ems="10"
         android:hint="Name..."
         android:inputType="textPersonName"
@@ -69,24 +70,25 @@
         app:layout_constraintTop_toBottomOf="@+id/ivBlack1Main" />
 
     <Spinner
-        android:id="@+id/spUserCatAddUser"
+        android:id="@+id/spUserCatAddPro"
         android:layout_width="215dp"
         android:layout_height="49dp"
-        android:layout_marginStart="103dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="93dp"
+        android:layout_marginEnd="96dp"
         android:backgroundTint="@color/purple_500"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPhoneAddUser"
+        app:layout_constraintTop_toBottomOf="@+id/etPhoneAddPro"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/etPhoneAddUser"
+        android:id="@+id/etPhoneAddPro"
         android:layout_width="216dp"
         android:layout_height="48dp"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="93dp"
         android:backgroundTint="#0C0C0C"
         android:ems="10"
@@ -95,35 +97,36 @@
         android:minHeight="48dp"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDescriptionAddUser" />
+        app:layout_constraintTop_toBottomOf="@+id/etDescriptionAddPro" />
 
     <ImageView
-        android:id="@+id/ivPhotoAddUser"
+        android:id="@+id/ivPhotoAddPro"
         android:layout_width="124dp"
         android:layout_height="92dp"
         android:layout_marginStart="143dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="144dp"
         android:background="@drawable/constructorimage"
         android:contentDescription="Professional Logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spUserCatAddUser" />
+        app:layout_constraintTop_toBottomOf="@+id/spUserCatAddPro" />
 
     <Button
-        android:id="@+id/btnAddAddUser"
+        android:id="@+id/btnAddAddPro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="165dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="162dp"
         android:text="Add"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPhotoAddUser" />
+        app:layout_constraintTop_toBottomOf="@+id/ivPhotoAddPro" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

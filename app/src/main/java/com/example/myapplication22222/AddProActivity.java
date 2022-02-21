@@ -28,9 +28,9 @@ import com.google.firebase.storage.UploadTask;
 import java.io.IOException;
 import java.util.UUID;
 
- class AddUserActivity extends AppCompatActivity {
+ class AddProActivity extends AppCompatActivity {
 
-    private static final String TAG = "AddUserActivity";
+    private static final String TAG = "AddProActivity";
     private EditText etName, etDesc, etAddress, etPhone;
     private Spinner spCat;
     private ImageView ivPhoto;
@@ -41,7 +41,7 @@ import java.util.UUID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_user);
+        setContentView(R.layout.activity_add_pro);
 
         getSupportActionBar().hide();
         connectComponents();
@@ -49,13 +49,13 @@ import java.util.UUID;
 
     private void connectComponents() {
         etName = findViewById(R.id.etNameMain);
-        etDesc = findViewById(R.id.etDescriptionAddUser);
-        etAddress = findViewById(R.id.etAddressAddUser);
-        etPhone = findViewById(R.id.etPhoneAddUser);
-        spCat = findViewById(R.id.spUserCatAddUser);
-        ivPhoto = findViewById(R.id.ivPhotoAddUser);
+        etDesc = findViewById(R.id.etDescriptionAddPro);
+        etAddress = findViewById(R.id.etAddressAddPro);
+        etPhone = findViewById(R.id.etPhoneAddPro);
+        spCat = findViewById(R.id.spUserCatAddPro);
+        ivPhoto = findViewById(R.id.ivPhotoAddPro);
         fbs = FirebaseServices.getInstance();
-        spCat.setAdapter(new ArrayAdapter<UserCat>(this, android.R.layout.simple_list_item_1, UserCat.values()));
+        spCat.setAdapter(new ArrayAdapter<ProCat>(this, android.R.layout.simple_list_item_1, ProCat.values()));
         storageReference = fbs.getStorage().getReference();
     }
 
@@ -78,9 +78,9 @@ import java.util.UUID;
             return;
         }
 
-        UserClass user = new UserClass( name, description,  address, address, category) ;
-        fbs.getFire().collection("Users")
-                .add(user)
+        ProDetails pro = new ProDetails( name, description , address,phone , photo , ProCat.valueOf(category) ) ;
+        fbs.getFire().collection("Professionals")
+                .add(pro)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
@@ -154,7 +154,7 @@ import java.util.UUID;
                                     // Dismiss dialog
                                     progressDialog.dismiss();
                                     Toast
-                                            .makeText(AddUserActivity.this,
+                                            .makeText(AddProActivity.this,
                                                     "Image Uploaded!!",
                                                     Toast.LENGTH_SHORT)
                                             .show();
@@ -169,7 +169,7 @@ import java.util.UUID;
                             // Error, Image not uploaded
                             progressDialog.dismiss();
                             Toast
-                                    .makeText(AddUserActivity.this,
+                                    .makeText(AddProActivity.this,
                                             "Failed " + e.getMessage(),
                                             Toast.LENGTH_SHORT)
                                     .show();

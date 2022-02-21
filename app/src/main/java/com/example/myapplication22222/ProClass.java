@@ -2,15 +2,15 @@ package com.example.myapplication22222;
 
 
 
-public class UserClass {
+public class ProClass {
 
     private String Name;
     private int IdNum;
     private int CardNum;
     private String Phone;
     private String Location;
-}
-    public UserClass(String Name, int idNum, int cardNum, String location, String Phone) {
+
+    public ProClass(String Name, int idNum, int cardNum, String location, String Phone) {
         this.Name = Name;
         this.IdNum = idNum;
         this.CardNum = cardNum;
@@ -45,16 +45,7 @@ public void setName() {
     public String getLocation() {
         return Location;
     }
-    public Void setLocation() {  Location =  Location; }
-
-
-
-
-
-
-
-
-
+    public void setLocation() {  Location =  Location; }
 
 
     @Override

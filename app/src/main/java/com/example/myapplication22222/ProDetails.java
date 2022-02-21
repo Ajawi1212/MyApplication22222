@@ -9,31 +9,39 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ProDetails extends AppCompatActivity {
 
-
-    private TextView tvName, tvExprience, tvAddress, tvPhone;
+    private TextView tvName, tvExprience, tvAddress, tvPhone,tvAge;
     private ImageView ivPhoto;
-    
+
+    public ProDetails(String name, String description, String address, String phone, String photo, ProCat valueOf) {
+
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_details);
+        setContentView(R.layout.activity_pro_details);
 
-       // connectComponents();
+        // connectComponents();
         Intent i = this.getIntent();
-    /*    User rest = (User) i.getSerializableExtra("rest");
-
-        tvName.setText(rest.getName());
-        tvExprience.setText(rest.getExprience());
+        connectComponents();
+    //  *  tvName.setText(ProDetails.getName());
+        /*
+        tvDescription.setText(rest.getDescription());
         tvAddress.setText(rest.getAddress());
+        tvCategory.setText(rest.getCategory().toString());
         tvPhone.setText(rest.getPhone());
-        Picasso.get().load(rest.getPhoto()).into(ivPhoto);
-    }*/
+        Picasso.get().load(rest.getPhoto()).into(ivPhoto);*/
+
+    }
 
     private void connectComponents() {
+
+        tvAge = findViewById(R.id.tvAgeProDetails);
         tvName = findViewById(R.id.tvNameProDetails);
         tvExprience = findViewById(R.id.tvExprienceProDetails);
         tvAddress = findViewById(R.id.tvAddressProDetails);
-        tvPhone = findViewById(R.id.etPhoneAddUser);
-        ivPhoto = findViewById(R.id.ivPhotoAddUser);
+        tvPhone = findViewById(R.id.etPhoneAddPro);
+        ivPhoto = findViewById(R.id.ivPhotoAddPro);
     }
 }

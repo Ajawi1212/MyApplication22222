@@ -9,7 +9,7 @@ enum ErrorCodes
     IncorrectAuth, FieldsEmpty, True, False
 }
 
-enum UserCat
+enum ProCat
 {
     Carpenter , Constractor , Designer , Electrical , IronWorker , Painter , Plumber , Tiler
 }
