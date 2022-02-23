@@ -4,58 +4,81 @@ package com.example.myapplication22222;
 
 public class ProClass {
 
-    private String Name;
-    private int IdNum;
-    private int CardNum;
-    private String Phone;
-    private String Location;
+    private String name;
+    private String description;
+    private String address;
+    private ProCat category;
+    private String photo;
+    private String phone;
 
-    public ProClass(String Name, int idNum, int cardNum, String location, String Phone) {
-        this.Name = Name;
-        this.IdNum = idNum;
-        this.CardNum = cardNum;
-        this.Location = location;
-        this.Phone = Phone;
-    }
-public String getName() {
-    return Name;
-}
 
-public void setName() {
-    Name=Name;
-}
-    public int getIdNum() {
-        return IdNum;
+    public ProClass(String name, String description, String address,
+                      ProCat category, String photo, String phone) {
+        this.name = name;
+        this.description = description;
+        this.address = address;
+        this.category = category;
+        this.photo = photo;
+        this.phone = phone;
     }
-    public void setIdNum() {
-        IdNum=IdNum;
-}
-    public int getCardNum() {
-        return CardNum;
+    public String getName() {
+        return name;
     }
-    public void setCardNum() {
-        CardNum=CardNum;
+
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public ProCat getCategory() {
+        return category;
+    }
+
+    public void setCategory(ProCat category) {
+        this.category = category;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
-    public void setPhone() { Phone=Phone;    }
-
-    public String getLocation() {
-        return Location;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
-    public void setLocation() {  Location =  Location; }
 
 
     @Override
     public String toString() {
-        return "User{" +
-                ", Name='" + Name + '\'' +
-                ", IdNum=" + IdNum +
-                ", Phone=" + Phone +
-                ", CardNum=" + CardNum +
-                ", Location='" + Location + '\'' +
+        return "Professional{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", address='" + address + '\'' +
+                ", category=" + category +
+                ", photo='" + photo + '\'' +
+                ", phone='" + phone + '\'' +
                 '}';
     }
 }

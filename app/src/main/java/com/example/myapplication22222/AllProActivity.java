@@ -24,7 +24,6 @@ public class AllProActivity extends AppCompatActivity {
 
     private RecyclerView rvProsAllPro;
     MyRecyclerViewAdapter adapter;
-    private AddProActivity professional;
     FirebaseServices fbs;
     ArrayList<ProClass> Professionals;
     MyCallBack myCallback;
@@ -43,7 +42,7 @@ public class AllProActivity extends AppCompatActivity {
             public void onCallBack(List<ProClass> attractionsList) {
                 RecyclerView recyclerView = findViewById(R.id.rvProsAllPro);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-                adapter = new MyRecyclerViewAdapter(getApplicationContext(), Professionals);
+                adapter = new MyRecyclerViewAdapter(getApplicationContext(),Professionals);
                 recyclerView.setAdapter(adapter);
             }
         };
@@ -67,7 +66,7 @@ public class AllProActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
-                                    Professionals.add(document.toObject(Professionals.class));
+                                    Professionals.add(document.toObject(ProClass.class));
                                 }
 
                                 myCallback.onCallBack(Professionals);
