@@ -48,7 +48,7 @@ import java.util.UUID;
     }
 
     private void connectComponents() {
-        etName = findViewById(R.id.etNameMain);
+        etName = findViewById(R.id.etUsernameMain);
         etDesc = findViewById(R.id.etDescriptionAddPro);
         etAddress = findViewById(R.id.etAddressAddPro);
         etPhone = findViewById(R.id.etPhoneAddPro);

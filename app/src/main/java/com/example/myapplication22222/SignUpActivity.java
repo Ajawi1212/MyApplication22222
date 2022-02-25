@@ -23,12 +23,14 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+             connectComponents();
+    }
+    private void connectComponents() {
         etUsername = findViewById(R.id.etUsernameSignup);
         etPassword = findViewById(R.id.etPasswordSignup);
-        fbs = FirebaseServices.getInstance();
         utils = Utilities.getInstance();
+        fbs = FirebaseServices.getInstance();
     }
-
 
     public void signup(View view) {
         String username = etUsername.getText().toString();

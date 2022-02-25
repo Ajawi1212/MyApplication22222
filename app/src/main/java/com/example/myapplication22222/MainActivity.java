@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getSupportActionBar().hide();
         connectComponents();
     }
 
@@ -57,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent i = new Intent(MainActivity.this, AddProActivity.class);
+                            Intent i = new Intent(MainActivity.this, AllProActivity.class);
                             startActivity(i);
 
                         } else {
-                            // TODO: what to do if fails
+                            Toast.makeText(getApplicationContext(), "Incorrect email or password!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
